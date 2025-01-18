@@ -1,0 +1,45 @@
+##version: '3.8'
+
+services:
+  pytorch:
+    container_name: opencv-testing
+    build:
+      context: .
+      dockerfile: Dockerfile.opencv
+    ports:
+      - "8080:8080"  # Expose port for web or application access
+      - "8888:8888"  # Expose port for jupyter notebook
+    networks:
+      - mynetwork
+    volumes:
+      - ./app/data:/app/data  # Mount local data folder to container
+      - ./app/models:/app/models  # Mount local data folder to container
+      - ./app/src:/app/src  # Mount local data folder to container
+      #- app_data:/app/data  # Mount named volume to container
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Pacific/Auckland
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia
+    #command: python3 app.py  # Start your app or Python script inside the container
+
+# Optional additional services (e.g., for a database or web server)
+# database:
+#   image: postgres
+#   environment:
+#     POSTGRES_PASSWORD: example
+#     POSTGRES_USER: user
+#     POSTGRES_DB: mydb
+
+networks:
+  mynetwork:
+    driver: bridge
+
+# volumes:
+#   app_data:
