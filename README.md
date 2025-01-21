@@ -1,6 +1,13 @@
 # CarTracker
 
 
+## GoPro metadata
+
+<https://www.trekview.org/blog/metadata-exif-xmp-360-video-files-gopro-gpmd/>
+
+exiftool: <https://exiftool.org/>
+
+
 ## jupyter notebook
 
 <http://127.0.0.1:8888/tree?token=3ecec65e6b059d505f379baa7dd6393912ef643fdd1c4450>
