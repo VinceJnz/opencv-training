@@ -94,7 +94,7 @@ def extract_text_from_image(roi):
     return text, confidence
 
 # Process an image for detection and OCR
-def process_image(image, output_path=""):
+def process_image(image, frame_num=0, output_path=""):
     print(f"Processing image started")
 
     # Data structure to store car, plate, and text data
@@ -171,13 +171,13 @@ def process_image(image, output_path=""):
     # Process car data to remove false positives
     print(f"Starting review of car data/plate")
     for car in car_data:
-        #print(f"Reviewing car: {car}")
+        print(f"Reviewing car: {car}")
         #car_box = car["car_box"]
         plates = car["plates"]
         if len(plates) > 1:
             # Compare plates with other cars
             for other_car in car_data:
-                #print(f"Reviewing other car: {other_car}")
+                print(f"Reviewing other car: {other_car}")
                 if np.array_equal(other_car["car_box"], car["car_box"]):
                     continue
                 #other_car_box = other_car["car_box"]
@@ -186,15 +186,20 @@ def process_image(image, output_path=""):
                     plate_text = plate["text"]
                     for other_plate in other_plates:
                         other_plate_text = other_plate["text"]
-                        #print(f"Reviewing plate: {plate}, and other_plate: {other_plate}")
+                        print(f"Reviewing plate: {plate}, and other_plate: {other_plate}")
                         # Check if the plate is a false positive
                         if np.array_equal(plate_text, other_plate_text):
-                            #print(f"Removing false positive plate: {plate}")
+                            print(f"Removing false positive plate: {plate}")
+                            #if np.any(plate):  # or np.all(plate) depending on your condition ???????
+                            #if np.all(plate):  # or np.all(plate) depending on your condition ???????
                             plates.remove(plate)
                             break
 
     # Process car data to draw bounding boxes and text
     print(f"Starting drawing boxes and text")
+    # Draw the frame number
+    text_0 = "frame num: " + str(frame_num)
+    cv2.putText(image, text_0, (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2) # Draws PLATE text above the plate bounding box
     for car in car_data:
         box_car = car["car_box"]
         car_id = car["car_id"]
@@ -260,7 +265,7 @@ def process_videos(input_path, output_path, frame_gap=20):
             print(f"processing frame: {frame_num}")
             # Process the frame
             #output_image_file_path = os.path.join(output_path, f"processed_{input_file_name}_{str(frame_num)}.jpg")
-            processed_frame = process_image(frame)
+            processed_frame = process_image(frame, frame_num)
 
             # Check if processed_frame is None
             if processed_frame is None:

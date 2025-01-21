@@ -1,0 +1,148 @@
+
+
+processing frame: 140
+Processing image started
+Starting review of car data/plate
+Reviewing car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+    'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+               {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+               {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+               {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+
+    Reviewing other car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+        'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+                   {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+                   {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+                   {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+    Reviewing other car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+        'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+                   {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+                   {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+                   {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+    Reviewing other car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+        'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+                   {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+                   {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+                   {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+    Reviewing other car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+        'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+                   {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+                   {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+                   {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+
+    Reviewing other car: {'car_id': 10, 'car_box': array([     170.57,      715.27,      2252.8,      1758.7], dtype=float32), 
+        'plates': [{'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}]}
+
+            Reviewing plate: {'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+            and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+
+            Reviewing plate: {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+            and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+
+            Reviewing plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+            and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+
+                Removing false positive plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}
+
+Traceback (most recent call last):
+  File "/app/src/app.py", line 319, in <module>
+    process_videos(input_folder, output_folder)
+  File "/app/src/app.py", line 268, in process_videos
+    processed_frame = process_image(frame, frame_num)
+  File "/app/src/app.py", line 195, in process_image
+    plates.remove(plate)
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+# 
+
+
+
+
+
+
+
+
+
+
+processing frame: 140
+Processing image started
+Starting review of car data/plate
+Reviewing car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': 
+    [
+     {'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+     {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+     {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+     {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}
+    ]}
+        Reviewing other car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+        Reviewing other car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+        Reviewing other car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+        Reviewing other car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+        Reviewing other car: {'car_id': 10, 'car_box': array([     170.57,      715.27,      2252.8,      1758.7], dtype=float32), 'plates': [{'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}]}
+            Reviewing plate: {'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+            Reviewing plate: {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+            Reviewing plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, and other_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+                Removing false positive plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}
+
+
+
+
+
+
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[9], line 6
+      4 input_folder = "../data"
+      5 output_folder = "../data/processed"
+----> 6 process_videos(input_folder, output_folder)
+      8 process_images(input_folder, output_folder)
+
+Cell In[7], line 38, in process_videos(input_path, output_path, frame_gap)
+     35 print(f"processing frame: {frame_num}")
+     36 # Process the frame
+     37 #output_image_file_path = os.path.join(output_path, f"processed_{input_file_name}_{str(frame_num)}.jpg")
+---> 38 processed_frame = process_image(frame, frame_num)
+     40 # Check if processed_frame is None
+     41 if processed_frame is None:
+
+Cell In[6], line 100, in process_image(image, frame_num, output_path)
+     97                         print(f"Removing false positive plate: {plate}")
+     98                         #if np.any(plate):  # or np.all(plate) depending on your condition ???????
+     99                         #if np.all(plate):  # or np.all(plate) depending on your condition ???????
+--> 100                         plates.remove(plate)
+    101                         break
+    103 # Process car data to draw bounding boxes and text
+
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+
+
+
+
+
+
+
+
+
+
+processing frame: 140
+Processing image started
+Starting review of car data/plate. Length of car data:  5
+Reviewing car: {'car_id': 3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 
+    'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, 
+               {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, 
+               {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, 
+               {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+        Reviewing other_car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+            Skipping other_car as it's the same as car
+        Reviewing other_car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+            Skipping other_car as it's the same as car
+        Reviewing other_car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+            Skipping other_car as it's the same as car
+        Reviewing other_car: {'car_id':  3, 'car_box': array([       2400,      874.83,      3563.8,        1625], dtype=float32), 'plates': [{'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, {'plate_box': array([     1008.8,      732.78,      1130.7,      783.31], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.92871}]}
+            Skipping other_car as it's the same as car
+        Reviewing other_car: {'car_id': 10, 'car_box': array([     170.57,      715.27,      2252.8,      1758.7], dtype=float32), 
+            'plates': [{'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}]}
+                Reviewing car_plate: {'plate_box': array([     532.59,      258.49,      712.86,       335.7], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.99289}, and other_car_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+                Reviewing car_plate: {'plate_box': array([     1490.4,      616.32,      1699.8,      700.75], dtype=float32), 'text': 'LDE383', 'text_confidence': 0.98179}, and other_car_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+                Reviewing car_plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}, and other_car_plate: {'plate_box': array([     1882.8,      740.85,      1994.8,      791.11], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.9501}
+                    Removing false positive plate: {'plate_box': array([      612.5,      944.33,      729.64,      997.53], dtype=float32), 'text': 'NAIRN ST', 'text_confidence': 0.93628}

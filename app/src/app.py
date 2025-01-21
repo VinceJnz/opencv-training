@@ -94,8 +94,10 @@ def extract_text_from_image(roi):
     return text, confidence
 
 # Process an image for detection and OCR
-def process_image(image, output_path=""):
+def process_image(image, frame_num=0, rotate=False, output_path=""):
     print(f"Processing image started")
+    if rotate:
+        image = cv2.rotate(image, cv2.ROTATE_180)
 
     # Data structure to store car, plate, and text data
     car_data = []
@@ -169,32 +171,55 @@ def process_image(image, output_path=""):
     # we will only add cars that have plates with text to the data structure.
 
     # Process car data to remove false positives
-    print(f"Starting review of car data/plate")
+    print(f"Starting review of car data/plate. Length of car data: ", len(car_data))
     for car in car_data:
-        #print(f"Reviewing car: {car}")
+        print(f"Reviewing car: {car}")
         #car_box = car["car_box"]
-        plates = car["plates"]
-        if len(plates) > 1:
+        car_plates = car["plates"]
+        if len(car_plates) > 1:
             # Compare plates with other cars
             for other_car in car_data:
-                #print(f"Reviewing other car: {other_car}")
-                if np.array_equal(other_car["car_box"], car["car_box"]):
+                print(f"Reviewing other_car: {other_car}")
+                if np.array_equal(other_car["car_box"], car["car_box"]): # Skip the same car
+                    print(f"Skipping other_car as it's the same as car")
                     continue
                 #other_car_box = other_car["car_box"]
-                other_plates = other_car["plates"]
-                for plate in plates:
-                    plate_text = plate["text"]
-                    for other_plate in other_plates:
-                        other_plate_text = other_plate["text"]
-                        #print(f"Reviewing plate: {plate}, and other_plate: {other_plate}")
+                other_car_plates = other_car["plates"]
+                l=len(car_plates)
+                i = 0
+                while i < l:
+                    car_plate = car_plates[i]
+                    car_plate_text = car_plate["text"]
+                    for j in range(len(other_car_plates)):
+                        other_car_plate = other_car_plates[j]
+                        other_car_plate_text = other_car_plate["text"]
+                        print(f"Reviewing car_plate: {car_plate}, and other_car_plate: {other_car_plate}")
                         # Check if the plate is a false positive
-                        if np.array_equal(plate_text, other_plate_text):
-                            #print(f"Removing false positive plate: {plate}")
-                            plates.remove(plate)
-                            break
+                        #if np.array_equal(car_plate_text, other_car_plate_text):
+                        if car_plate_text == other_car_plate_text:
+                            print(f"Removing false positive plate: {car_plate}")
+                            car_plates.pop(i)
+                            l-=1 # Decrement the length of car_plates list as we have removed an element
+                    i+=1 # Increment the index for the car_plates list
+
+                #for car_plate in car_plates: # Compare each car_plate with each other_car_plate
+                #    car_plate_text = car_plate["text"]
+                #    for other_car_plate in other_car_plates:
+                #        other_car_plate_text = other_car_plate["text"]
+                #        print(f"Reviewing car_plate: {car_plate}, and other_car_plate: {other_car_plate}")
+                #        # Check if the plate is a false positive
+                #        if np.array_equal(car_plate_text, other_car_plate_text):
+                #            print(f"Removing false positive plate: {car_plate}")
+                #            #if np.any(plate):  # or np.all(plate) depending on your condition ???????
+                #            #if np.all(plate):  # or np.all(plate) depending on your condition ???????
+                #            car_plates.remove(car_plate)
+                #            break
 
     # Process car data to draw bounding boxes and text
     print(f"Starting drawing boxes and text")
+    # Draw the frame number
+    text_0 = "frame num: " + str(frame_num)
+    cv2.putText(image, text_0, (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2) # Draws PLATE text above the plate bounding box
     for car in car_data:
         box_car = car["car_box"]
         car_id = car["car_id"]
@@ -260,7 +285,7 @@ def process_videos(input_path, output_path, frame_gap=20):
             print(f"processing frame: {frame_num}")
             # Process the frame
             #output_image_file_path = os.path.join(output_path, f"processed_{input_file_name}_{str(frame_num)}.jpg")
-            processed_frame = process_image(frame)
+            processed_frame = process_image(frame, frame_num, rotate=True) #, output_image_file_path)
 
             # Check if processed_frame is None
             if processed_frame is None:
@@ -298,12 +323,14 @@ def process_images(input_path, output_path):
         input_image_files.extend(glob.glob(os.path.join(input_path, ext)))
 
     # Process each image file
+    image_num = 0
     for input_image_file in input_image_files:
         input_file_name = os.path.basename(input_image_file)
         output_file_name = os.path.join(output_path, f"processed_{input_file_name}")
         print(f"Processing image: {input_file_name}, to {output_file_name}")
         image = cv2.imread(input_image_file)
-        process_image(image, output_file_name)
+        process_image(image, frame_num=image_num, output_path=output_file_name)
+        image_num += 1
 
 
 if __name__ == "__main__":

@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     libglib2.0-0 \
     && apt-get clean \
+    ffmpeg \
     pip3 install --upgrade pip
 
 # Install Python dependencies. # default timeout is 15 seconds. This may need to be increased for slow internet connections.
@@ -33,7 +34,8 @@ RUN pip3 install --no-cache-dir --timeout=1000 \
     torchvision \
     ultralytics \
     paddlepaddle \
-    paddleocr
+    paddleocr \
+    ffmpeg-python
 
 # Copy the project files into the container
 COPY ./app/ /app
