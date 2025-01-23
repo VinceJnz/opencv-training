@@ -8,6 +8,9 @@
 exiftool: <https://exiftool.org/>
 
 
+` .\exiftool -ee -G3 -X .\GH010341.MP4 > extract.txt`
+
+
 ## jupyter notebook
 
 <http://127.0.0.1:8888/tree?token=3ecec65e6b059d505f379baa7dd6393912ef643fdd1c4450>
